@@ -1,4 +1,3 @@
-```
 name: mlops-project-2
 
 on:
@@ -60,4 +59,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: python mlops_project-2/hosting/hosting.py
-```
+        
