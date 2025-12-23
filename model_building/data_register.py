@@ -28,7 +28,11 @@ api.upload_folder(
     repo_id=repo_id,
     repo_type=repo_type,
     token=hf_token,
+<<<<<<< HEAD
     # private=False,
+=======
+    private=False,
+>>>>>>> 1494572d19f525daec403d79a10e3e1c70de7b7e
     exist_ok=True,
 )
 # Venu
