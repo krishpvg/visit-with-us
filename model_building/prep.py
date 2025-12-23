@@ -33,7 +33,7 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error, m
 
 # Define constants for the dataset and output paths
 api = HfApi(token=os.getenv("HF_TOKEN"))
-DATASET_PATH = "hf://datasets/krishpvg/visit-with-us-data/tourism.csv"
+DATASET_PATH = "hf://datasets/krishpvg/visit-with-us-data/data/tourism.csv"
 df = pd.read_csv(DATASET_PATH)
 print("Dataset loaded successfully.")
 
