@@ -17,6 +17,7 @@ Tourism package prediction.
 TypeofContact = st.selectbox("Type of contact", ["Self Enquiry", "Company Invited"])
 CityTier = int(st.selectbox("City Tier", ["1", "2", "3"]))
 Occupation = st.selectbox("Occupation", ["Salaried", "Free Lancer", "Small Business", "Large Business"])
+Gender = st.selectbox("Gender", ["Male", "Female"])
 Age = st.number_input("Age",min_value=18, max_value=70, value=18, step=1)
 MaritalStatus = st.selectbox("Marital StatusType of contact", ["Single", "Married", "Unmarried", "Divorced"])
 Passport = st.checkbox("Passport available?")
@@ -27,7 +28,7 @@ Designation = st.selectbox("Designation", ["Executive", "Managerial", "Professio
 MonthlyIncome = st.number_input("Monthly Income",min_value=1000, max_value=1000000, value=1000, step=1)
 PreferredPropertyStar = int(st.selectbox("Preferred Property Star", ["3", "4", "5"]))
 NumberOfChildrenVisiting = int(st.selectbox("Number of children visiting", ["0", "1", "2", "3", "4", "5"]))
-NumberofTrips = st.number_input("Number of trips",min_value=1, max_value=50, value=1, step=1)
+NumberOfTrips = st.number_input("Number of trips",min_value=1, max_value=50, value=1, step=1)
 PitchSatisfactionScore = int(st.selectbox("Pitch Satisfaction Score", ["1", "2", "3", "4", "5"]))
 ProductPitched = st.selectbox("Product Pitched", ["Basic", "Standard", "Deluxe", "Super Deluxe", "King"])
 NumberOfFollowups = st.number_input("Number of Followups",min_value=1, max_value=10, value=1, step=1)
@@ -37,6 +38,7 @@ DurationOfPitch = st.number_input("Duration of Pitch",min_value=1, max_value=100
 input_data = pd.DataFrame([{
     'TypeofContact': TypeofContact,
     'CityTier': CityTier,
+    'Gender' : Gender,
     'Occupation': Occupation,
     'PreferredPropertyStar': PreferredPropertyStar,
     'MaritalStatus': MaritalStatus,
@@ -46,7 +48,7 @@ input_data = pd.DataFrame([{
     'Designation': Designation,
     'MonthlyIncome': MonthlyIncome,
     'Age': Age,
-    'Numberoftrips': NumberofTrips,
+    'NumberOfTrips': NumberOfTrips,
     'PitchSatisfactionScore': PitchSatisfactionScore,
     'ProductPitched': ProductPitched,
     'NumberOfFollowups': NumberOfFollowups,
